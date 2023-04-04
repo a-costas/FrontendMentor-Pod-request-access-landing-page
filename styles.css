@@ -1,0 +1,252 @@
+:root {
+  --Bright-Green: hsl(157, 74%, 62%);
+  --Bright-Green-hover: hsl(157, 100%, 85%);
+  --Dark-Blue: hsl(224, 35%, 11%);
+  --Navy-Blue: hsl(225, 26%, 23%);
+  --Unsaturated-Blue: hsl(225, 21%, 45%);
+  --Sky-Blue: hsl(225, 40%, 83%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  width: 100%;
+  background-color: var(--Dark-Blue);
+  overflow: auto;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+  align-items: center;
+  z-index: 1;
+}
+
+.landing-page::before {
+  content: "";
+  inset: 0;
+  position: absolute;
+  background-image: url("./assets/mobile/image-host.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.logo {
+  margin-top: 3.875rem;
+  width: 8.4281rem;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+  margin-top: 3.5625rem;
+  margin-bottom: 5.875rem;
+}
+
+h1 {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  color: var(--Bright-Green);
+  text-align: center;
+}
+
+.highlight {
+  color: var(--White);
+}
+
+p {
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5625rem;
+  color: var(--Sky-Blue);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.brands {
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.375rem;
+  justify-content: space-between;
+  margin-top: 2.0625rem;
+}
+
+.brand {
+  height: 0.9375rem;
+  color: var(--Unsaturated-Blue);
+}
+
+form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input {
+  background-color: var(--Navy-Blue);
+  border-radius: 1.75rem;
+  border: none;
+  padding: 0.5625rem 0 0.5625rem 2rem;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: var(--White);
+}
+
+input::placeholder {
+  color: hsl(0, 0%, 73%);
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+}
+
+button {
+  background-color: var(--Bright-Green);
+  border-radius: 1.75rem;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.75rem;
+  color: var(--Dark-Blue);
+  border: none;
+  padding: 0.5625rem 0;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--Bright-Green-hover);
+}
+
+.input-error {
+  color: red;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 0.8925rem;
+  padding-left: 2rem;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    margin: 0;
+    margin-bottom: 9.5rem;
+    width: 8.4281rem;
+  }
+
+  .landing-page {
+    padding: 3.125rem 5.875rem 16rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .landing-page::before {
+    background-image: url(assets/tablet/image-host.jpg);
+    background-position: top right;
+    background-size: auto;
+    opacity: 1;
+  }
+
+  .landing-page::after {
+    content: "";
+    inset: 0;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: bottom left 1.875rem;
+    z-index: 1;
+  }
+
+  .content {
+    margin: 0;
+    width: 635px;
+    background-color: var(--Dark-Blue);
+    justify-content: left;
+    padding-left: 0;
+  }
+
+  h1,
+  p {
+    text-align: left;
+  }
+
+  h1 {
+    margin-top: 5.8125rem;
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+
+  p {
+    margin-top: 1.9375rem;
+    max-width: 27.8125rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .brands {
+    order: 4;
+    margin-top: 4rem;
+    margin-bottom: 1px;
+  }
+
+  .brand {
+    height: 1.8125rem;
+  }
+
+  form {
+    position: relative;
+    margin-top: 2.5rem;
+  }
+
+  input {
+    width: 100%;
+    height: 3.5rem;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+
+  button {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    top: 5px;
+    z-index: 2;
+    padding: 0.5625rem 1.6875rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-page {
+    padding: 6.375rem 0 0 10.3125rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .landing-page::before {
+    background-image: url(assets/desktop/image-host.jpg);
+    background-position: top 8.125rem right;
+    background-size: auto;
+    opacity: 1;
+  }
+
+  .landing-page::after {
+    content: "";
+    inset: 0;
+    background-image: url(assets/desktop/bg-pattern-dots.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: bottom 78px right;
+    z-index: 1;
+  }
+}
