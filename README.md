@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor solution link](https://www.frontendmentor.io/challenges/pod-request-access-landing-page-eyTmdkLSG/solutions/new)
+- Solution URL: [Frontend Mentor solution link](https://www.frontendmentor.io/solutions/responsive-pod-request-access-landing-page-tPHu9ro9_p)
 - Live Site URL: [Pod Access Request Deployment Link](https://a-costas.github.io/FrontendMentor-Pod-request-access-landing-page/)
 
 ## My process
