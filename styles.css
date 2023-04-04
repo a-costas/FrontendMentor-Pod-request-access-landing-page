@@ -8,6 +8,12 @@
   --White: hsl(0, 0%, 100%);
 }
 
+/* input "reset" to get rid of white background when autofill used  */
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
 body {
   width: 100%;
   background-color: var(--Dark-Blue);
@@ -109,6 +115,12 @@ input::placeholder {
   line-height: 1.75rem;
 }
 
+input:focus,
+input:invalid,
+input:valid {
+  background: var(--Navy-Blue);
+}
+
 button {
   background-color: var(--Bright-Green);
   border-radius: 1.75rem;
@@ -195,7 +207,7 @@ button:focus {
 
   .brands {
     order: 4;
-    margin-top: 4rem;
+    margin-top: 3.1081rem;
     margin-bottom: 1px;
   }
 
@@ -225,6 +237,12 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
+  .logo {
+    margin: 0;
+    margin-bottom: 6.4375rem;
+    width: 8.4281rem;
+  }
+
   .landing-page {
     padding: 6.375rem 0 0 10.3125rem;
     display: flex;
@@ -247,5 +265,24 @@ button:focus {
     position: absolute;
     background-position: bottom 78px right;
     z-index: 1;
+  }
+
+  .content {
+    margin: 0;
+    width: 723px;
+  }
+
+  h1 {
+    margin-top: 5.5rem;
+    font-size: 3.25rem;
+    line-height: 3.875rem;
+  }
+
+  p {
+    margin-top: 1.5rem;
+  }
+
+  form {
+    width: 427px;
   }
 }
